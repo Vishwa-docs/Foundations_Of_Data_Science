@@ -1,0 +1,5 @@
+# Write down your obervations, physical interpretation, Polynomial regression with existing functions, k nearest neighbours and clustering
+# Linear (Implementation with inbuilt and formulae functions)
+
+
+sklearn and pandas polynomial regression

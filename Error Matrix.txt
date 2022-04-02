@@ -1,0 +1,10 @@
+There are multiple Error Matrix
+These are ways to decide on an error for a model
+
+
+Errors can only be determined by the data
+
+
+RMS Error
+MPE Error
+SSE Error

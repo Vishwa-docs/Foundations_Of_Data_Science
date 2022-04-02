@@ -1,0 +1,107 @@
+Jupyter Notebooks
+Install in mac
+
+IPython was rolled into the Jupyter Notebook
+
+The Notebooks can be used to watch and reproduce the results from others. We can use variety of languages such as Markdown or Python. We can also generate live graphs from the data
+
+Extension : .ipynb (Opens as JSON)
+
+Jupyter Commands
+
+Installing
+	pip3 install jupyter
+	or use the Anaconda Navigator
+
+Starting a Notebook : 
+	Use the Anaconda Navigator Files
+	Or
+		Use cd mkdir and ls and go to a file
+		type "jupyter notebook" in terminal
+		This will open a jupter notebook in out local host machine (Or 8888 port). This is a notebook server. If we close the terminal and window then we wont be able to access the notebook so leave those running
+
+Creating a notebook : 
+	To create a new notebook, we need to start with a kernel
+	Click on New->Python[root] (In most machines, root is 3)
+
+You can click on Help->User Interface Tour to get a guide on the notebook
+Help->Keyboard Shortcuts
+
+Renaming : Click on the name and change it
+
+Notebooks have 2 modes : 
+	Command mode : Allows us to perform actions like adding and deleting cells. Press the esc key. Cell turns Blue
+	Edit mode : Allows you to edit. Press the enter key. Or, you can also click into a cell to enter edit mode. The cell turns green, and a small pencil icon appears
+
+	For entering data, you can enter as you would in shell or interactive mode, both work
+
+Running Commands : 
+	You can write programs in CELLS in edit mode.
+	If you click enter, only more lines will be added in the cell
+
+	To Run the command : 
+		Cells->Run Cells (Runs the Cell) [Ctrl+Enter]
+		Cells->Run Cells and Select Below : Runs the cell and selects the next cell. If it doesnt exist, it makes a new one [Shift+Enter]
+		Cells->Run Cells and Insert Below : Runs the cell and inserts a new cell below it [Option+Enter]
+
+
+		Cells->Run All : Runs all the cell
+
+		Cells->Run Above / Below current Cells
+
+	Kernel->Restart and Kill [To stop all the processes, all the numbers in the box also gets reset]
+
+
+The numbers next to the notebook show the order of the execution and inputs of the cells. Eg: If you type a name in 2 different cells, the output will be whichever was executed last, irrespective of order of writing the command.
+
+
+Adding Cells : 
+	Insert->Add Above or Below
+
+Adding Markdown : 
+	Text that gets translated to HTML and used to add text to the notebook to explain
+
+	Select the cell that you want, go to Cell->Cell Type->Markdown (Or M)
+
+	Run usig Ctrl+Enter to run the md cell
+
+
+Bash Commands : 
+	Start with !
+	Eg : !pip list 
+
+Magic Commands : 
+	Start with % or %%
+
+	% : Commands arguments will come from the same line (Line Magics)
+	%% : Entire cell will be used as the commands arguments (Cell Magics)
+
+
+	Eg : 
+	List all the commands in jupyter : %lsmagic
+
+	Present Working directory : %pwd
+	List directories : %ls -la
+
+	You can use normal terminal commands
+
+
+	%matplotlib inline : Allows matplotlib charts to be displayed in our jupyter. You can execute this line first then add the matplotlib code in another cell
+
+
+	%%HTML : Allows us to render HTML directly without md. The whole cell will be rendered
+
+	%%javascript
+	%%bash : Series of bash commands in one cell
+	%%timeit : Adds functionality to time a cell command. it is a cell magic, so type the commands under the timeit line and it will return the time
+
+
+	You can display a pandas dataframe or numpy array directly from the notebook without using magic commands
+
+
+Export Notebook : 
+	File->Download As (HTML, Python File etc.)
+	You can open the notebook file in a text editor. You will find that it is just a JSON type file
+
+
+You can install another kernel using the anaconda environments

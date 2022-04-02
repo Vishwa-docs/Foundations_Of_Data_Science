@@ -1,0 +1,24 @@
+Introduction to Numpy
+(Via FreeCodeCamp)
+
+It is a multidimensional array library. We use numpy as the lists are very slow as compared to arrays in numpy. 
+
+Why numpy is faster?
+Numpy uses fixed types. When we store a number, it is stored as an "int32" bit binary number (Taking 4 memory spaces, but we can also specify and store the number in smaller bytes like "int16" which is 2 memory spaces (bytes) or "int8")
+List is a built in int type. We need to store a lot more information with lists. It has object value, object type, reference count (How many times its been pointed at) and size of the int value. Each of these has its own space requirements. Object Value, Object type and reference count all use long int values (8 bytes x 3) and int value takes 4 bytes. Hence, it needs more space than numpy. Hence, since it needs less space the computer can read it faster.
+Another reason it is faster is because there is no type checking while iterating to objects
+Another reason why its faster is because numpy array uses continuous memory. List memory need not be continuous. List is just containing pointers to the numbers that are scattered around in the memory. In numpy, you need to store the start of the memory, total size and type of memory block. Computers have SIMD (Single Instruction Multiple Data) vector type memory units. If we need to perform mutiple additions at a time we can use these values to perform multiple additions at a time. We are basically effectively using our cache to avoind longer memory lookups like how lists uses. 
+
+List is different from numpy. We can do insertions, deletions, appeding, concatenation etc. We can also do the same things in numpy, but we can do a lot more than that.
+Eg : In lists, we cannot type a*b and expect to get the one-to-one multiplication of the arrays. But in numpy it is possible
+	a = np.array([1, 3, 5])
+	b = np.array([1, 2, 3])
+	a * b # np.array([1, 6, 15])
+
+
+
+# Applications of Numpy :
+	1. Useful in mathematics applications (MATLAB replacement, Scipy has more functions)
+	2. Plotting (w/ Matplotlib)
+	3. Baclend Applications (Pandas, Games like Connect 4, Digital Photography like png images)
+	4. Useful in Machine Learning (Tensor Libraries)
